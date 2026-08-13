@@ -34,20 +34,19 @@
     const id = localStorage.getItem(ACTIVE_PROFILE_KEY);
     return typeof id === "string" && id ? id : "default";
   }
+  const PROFILE_ID = activeProfileId();
 
   function scopedStorageKey(baseKey) {
-    return `${PROFILE_KEY_PREFIX}${activeProfileId()}:${baseKey}`;
+    return `${PROFILE_KEY_PREFIX}${PROFILE_ID}:${baseKey}`;
   }
 
-  // Reads the per-profile entry first, then makes a non-destructive copy of a
-  // legacy setting on the first profile-enabled launch. Unknown saved fields
-  // are retained in the stored object; only schema-recognised fields are used.
+  // Legacy state is the shared Default. Profiles store only changed values,
+  // avoiding a full duplicate of the workspace for every person.
   function loadPersistedState(baseKey) {
     const scopedKey = scopedStorageKey(baseKey);
     const scoped = localStorage.getItem(scopedKey);
     if (scoped !== null) return safeParse(scoped, null);
     const legacy = localStorage.getItem(baseKey);
-    if (legacy !== null) localStorage.setItem(scopedKey, legacy);
     return safeParse(legacy, null);
   }
 
@@ -70,6 +69,7 @@
     _onParams: null,
     _onExtras: null,
     _cameraBinding: null,
+    _persistenceSuspended: false,
 
     init(config) {
       this.schema = config.schema || [];
@@ -137,6 +137,10 @@
         this.setParam(data.id, data.value, data.commit !== false);
       } else if (data.type === "shaderops/set-state") {
         this.setState(data.payload || {}, data.commit !== false);
+      } else if (data.type === "shaderops/suspend-persistence") {
+        this.suspendPersistence();
+      } else if (data.type === "shaderops/resume-persistence") {
+        this.resumePersistence();
       } else if (data.type === "shaderops/action") {
         const fn = this.actions[data.action];
         if (typeof fn === "function") fn(data.payload);
@@ -182,7 +186,16 @@
     },
 
     persist() {
+      if (this._persistenceSuspended) return;
       localStorage.setItem(scopedStorageKey(this.storageKey), JSON.stringify({ params: this.params, ...this.extras }));
+    },
+
+    suspendPersistence() {
+      this._persistenceSuspended = true;
+    },
+
+    resumePersistence() {
+      this._persistenceSuspended = false;
     },
 
     _applyCameraFromExtras() {

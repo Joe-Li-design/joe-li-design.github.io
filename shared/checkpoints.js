@@ -16,19 +16,17 @@
   const LOCK_STORAGE_PREFIX = "shaderops:locked-controls:";
   const ACTIVE_PROFILE_KEY = "shaderops:active-profile:v1";
   const PROFILE_KEY_PREFIX = "shaderops:profile:";
+  const PROFILE_ID = localStorage.getItem(ACTIVE_PROFILE_KEY) || "default";
 
   function scopedStorageKey(baseKey) {
-    const profileId = localStorage.getItem(ACTIVE_PROFILE_KEY) || "default";
-    return `${PROFILE_KEY_PREFIX}${profileId}:${baseKey}`;
+    return `${PROFILE_KEY_PREFIX}${PROFILE_ID}:${baseKey}`;
   }
 
   function getStored(baseKey) {
     const scopedKey = scopedStorageKey(baseKey);
     const scoped = localStorage.getItem(scopedKey);
     if (scoped !== null) return scoped;
-    const legacy = localStorage.getItem(baseKey);
-    if (legacy !== null) localStorage.setItem(scopedKey, legacy);
-    return legacy;
+    return localStorage.getItem(baseKey);
   }
 
   function waitForBridge(cb, attempts = 0) {
@@ -251,7 +249,7 @@
       const saved = JSON.parse(getStored(storageKey) || "[]");
       if (Array.isArray(saved)) lockedIds = new Set(saved.filter((id) => typeof id === "string"));
     } catch {
-      localStorage.removeItem(storageKey);
+      console.warn("[ShaderOps Checkpoints] ignored invalid saved lock data.");
     }
 
     const saveLocks = () => {
