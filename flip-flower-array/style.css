@@ -1,0 +1,26 @@
+* { box-sizing: border-box; }
+html, body, #app { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #0b0910; font-family: -apple-system, "SF Pro Display", "Segoe UI", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+canvas { display: block; width: 100%; height: 100%; }
+.panel-toggle-dock { position: fixed; top: 10px; left: 10px; z-index: 11; }
+.panel-toggle-dock button { width: 30px; height: 30px; border: 1px solid rgba(255,255,255,.09); background: rgba(15,13,20,.88); color: rgba(255,255,255,.58); border-radius: 8px; font-size: 13px; line-height: 1; cursor: pointer; }
+.hidden { display: none !important; }
+.hud { position: fixed; display: flex; flex-direction: column; max-height: calc(100vh - 20px); top: 10px; left: 10px; width: min(312px, calc(100% - 20px)); z-index: 10; background: rgba(13,12,18,.82); backdrop-filter: blur(28px) saturate(1.4); -webkit-backdrop-filter: blur(28px) saturate(1.4); border: 1px solid rgba(255,255,255,.08); border-radius: 12px; color: rgba(255,255,255,.82); box-shadow: inset 0 1px 0 rgba(255,255,255,.07), 0 20px 48px rgba(0,0,0,.72); }
+.hud-header { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 7px 9px; border-bottom: 1px solid rgba(255,255,255,.05); }
+.hud-title { font-size: 10.5px; font-weight: 600; letter-spacing: .03em; color: rgba(255,255,255,.5); text-transform: uppercase; }
+.hud-actions button { border: 1px solid rgba(255,255,255,.09); background: transparent; color: rgba(255,255,255,.4); border-radius: 6px; font-size: 11px; line-height: 1; padding: 3px 6px; cursor: pointer; }
+.hud-body { padding: 8px 9px; display: flex; flex-direction: column; gap: 6px; min-height: 0; flex: 1; }
+.controls { display: grid; gap: 8px; flex: 1; min-height: 0; overflow-y: auto; padding-right: 2px; }
+.controls::-webkit-scrollbar { width: 8px; }
+.controls::-webkit-scrollbar-thumb { border-radius: 99px; background: rgba(255,255,255,.12); }
+.control-group { display: grid; gap: 3px; padding: 6px 6px 7px; border: 1px solid rgba(255,255,255,.06); border-radius: 8px; background: rgba(255,255,255,.02); }
+.control-group h3 { margin: 0 0 3px; font-size: 9px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.36); }
+.control-row { display: grid; grid-template-columns: 66px 1fr 62px; align-items: center; gap: 6px; height: 22px; }
+.control-row label { font-size: 10px; color: rgba(255,255,255,.35); letter-spacing: .03em; text-transform: none; }
+.control-row input[type="range"] { width: 100%; height: 3px; accent-color: rgba(220,180,220,.78); cursor: pointer; }
+.control-row input[type="number"] { width: 100%; border-radius: 5px; border: 1px solid rgba(255,255,255,.08); background: rgba(150,130,160,.1); color: rgba(255,255,255,.78); font-size: 10px; font-family: inherit; padding: 3px 6px; -moz-appearance: textfield; }
+.control-row input[type="number"]::-webkit-inner-spin-button, .control-row input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; }
+.actions { display: flex; gap: 5px; padding-top: 2px; flex-wrap: wrap; align-items: center; flex-shrink: 0; }
+.history-actions { display: inline-flex; gap: 5px; margin-right: auto; }
+.history-actions button { min-width: 22px; width: 22px; height: 22px; padding: 0; border: 0; background: transparent; color: rgba(255,255,255,.7); font-size: 16px; cursor: pointer; }
+.actions button { border: 1px solid rgba(255,255,255,.1); background: rgba(150,130,160,.13); color: rgba(255,255,255,.7); border-radius: 7px; font-size: 10px; font-family: inherit; padding: 5px 9px; cursor: pointer; }
+.actions button:hover { background: rgba(190,170,200,.2); color: rgba(255,255,255,.9); }

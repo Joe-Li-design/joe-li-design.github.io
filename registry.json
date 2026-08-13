@@ -1,0 +1,1241 @@
+﻿{
+  "version": 1,
+  "projects": [
+    {
+      "id": "spectral-lens-burst",
+      "name": "Spectral Lens Burst",
+      "engine": "Three.js + fullscreen GLSL radial optics generator",
+      "license": "MIT (Three.js) + custom shader code",
+      "description": "A cinematic lens-flare and spectral light-burst generator inspired by radial prism photography: white-hot source core, randomized chromatic rays, elongated glass blocks, anamorphic streaks, halo rings, and lens ghosts. Coherent random presets produce dense bursts, needle flares, or prism-heavy compositions.",
+      "entry": "/spectral-lens-burst/index.html",
+      "bridged": true,
+      "controls": [
+        "Speed / Intensity / Seed",
+        "Source X / Source Y / Core Size",
+        "Ray Count / Ray Length / Ray Width / Variation",
+        "Prism Blocks / Ghost Orbs / Halo",
+        "Dispersion / Hue Shift / Saturation",
+        "Film Grain / Vignette",
+        "Pause / All Random / Seed / Undo / Redo"
+      ],
+      "tags": ["2d", "shader", "lens-flare", "light-burst", "prism", "spectral", "vfx"],
+      "createdAt": "2026-08-06"
+    },
+    {
+      "id": "ocean-swell",
+      "name": "Ocean Swell",
+      "engine": "Three.js 3D + analytic-wave PlaneGeometry + domain-warped fbm + anisotropic sun glitter",
+      "license": "MIT (Three.js) + custom shader code",
+      "description": "A real 3D ocean-swell surface: analytic vertex-shader travelling waves with exact per-vertex normals/tangents drive both the wave-fold geometry and a Kajiya-Kay anisotropic 'sun glitter' specular that scatters into scintillating points (via a sparkle threshold mask) instead of a continuous streak. Diffuse color stays fully isotropic domain-warped fbm so it reads as drifting current bands, not wood grain. Whitecap foam appears at wave crests and steep faces, and sun hue/tint plus glitter blend mode (Add/Screen/Overlay) are fully adjustable.",
+      "entry": "/ocean-swell/index.html",
+      "bridged": true,
+      "controls": [
+        "Speed (slider + number)",
+        "Wave Height (slider + number)",
+        "Wave Frequency (slider + number)",
+        "Water Hue (slider + number)",
+        "Hue Range (slider + number)",
+        "Saturation (slider + number)",
+        "Lightness (slider + number)",
+        "Pattern Scale (slider + number)",
+        "Current Flow Speed (slider + number)",
+        "Warp Strength (slider + number)",
+        "Detail (slider + number)",
+        "Foam Amount (slider + number)",
+        "Foam Detail (slider + number)",
+        "Sun Glitter (slider + number)",
+        "Glitter Sharpness (slider + number)",
+        "Surface Roughness (slider + number)",
+        "Fresnel Reflection (slider + number)",
+        "Sun / Sky Hue (slider + number)",
+        "Sun Tint (slider + number)",
+        "Glitter Blend (dropdown: Add / Screen / Overlay)",
+        "Pause / All random / Seed / Undo / Redo / PNG export"
+      ],
+      "tags": [
+        "3d",
+        "ocean",
+        "water",
+        "waves",
+        "foam",
+        "specular",
+        "domain-warp",
+        "interactive-camera",
+        "editable-controls"
+      ],
+      "createdAt": "2026-07-24"
+    },
+    {
+      "id": "flip-flower-array",
+      "name": "Flip Flower Array",
+      "engine": "Three.js 3D + RoundedBoxGeometry + OrbitControls",
+      "license": "MIT (Three.js) + custom 3D scene code",
+      "description": "A dense soft-tile array with real rounded geometry, deterministic random flips, colored flower accents, and interactive Blender-style camera navigation.",
+      "entry": "/flip-flower-array/index.html",
+      "bridged": true,
+      "controls": [
+        "Speed (slider + number)",
+        "Flip Rate (slider + number)",
+        "Depth (slider + number)",
+        "Hue (slider + number)",
+        "Sat (slider + number)",
+        "Cols (slider + number)",
+        "Rows (slider + number)",
+        "Gap (slider + number)",
+        "Bevel (slider + number)",
+        "Flowers (slider + number)",
+        "Petal Size (slider + number)",
+        "Var / Strength / Range",
+        "Pause / All random / Seed / Undo / Redo / PNG export"
+      ],
+      "tags": [
+        "3d",
+        "array",
+        "rounded-tiles",
+        "random-flip",
+        "flowers",
+        "interactive-camera",
+        "editable-controls"
+      ],
+      "createdAt": "2026-07-10"
+    },
+    {
+      "id": "curl-noise-flow-field",
+      "name": "Curl Noise Flow Field",
+      "engine": "Three.js 3D + Points + custom curl-noise + trail render-target",
+      "license": "MIT (Three.js) + custom scene code",
+      "description": "Thousands of glowing particles advected through a divergence-free curl-noise vector field, rendered with a persistent fading trail buffer and additive glow tonemap for smooth luminous streaks.",
+      "entry": "/curl-noise-flow-field/index.html",
+      "bridged": true,
+      "controls": [
+        "Speed (slider + number)",
+        "Particle Density (slider + number)",
+        "Curl Scale (slider + number)",
+        "Field Speed (slider + number)",
+        "Trail Fade (slider + number)",
+        "Hue / Sat / Hue Spread",
+        "Particle Size / Glow Intensity",
+        "Pause / All random / Seed / Undo / Redo / PNG export"
+      ],
+      "tags": [
+        "3d",
+        "particles",
+        "curl-noise",
+        "flow-field",
+        "glow-trails",
+        "editable-controls"
+      ],
+      "createdAt": "2026-07-14"
+    },
+    {
+      "id": "flow-trace-stopper",
+      "name": "Flow Trace Stopper",
+      "engine": "p5.js 2D persistent canvas + controllable vector field + numeric curl advection",
+      "license": "Custom code (free commercial use)",
+      "description": "Generates a controllable random flow vector field, computes local curl, seeds uniformly distributed jittered points, and advects those points into smooth persistent curves.",
+      "entry": "/flow-trace-stopper/index.html",
+      "bridged": true,
+      "controls": [
+        "Speed (slider + number)",
+        "Field Scale (slider + number)",
+        "Field Warp (slider + number)",
+        "Curl Strength (slider + number)",
+        "Density (slider + number)",
+        "Point Jitter (slider + number)",
+        "Step Length (slider + number)",
+        "Trail Steps (slider + number)",
+        "Stroke Width (slider + number)",
+        "Fade (slider + number)",
+        "Hue / Sat",
+        "Pause / All random / Seed / Undo / Redo / PNG export"
+      ],
+      "tags": [
+        "2d",
+        "flow-field",
+        "curl",
+        "advection",
+        "curves",
+        "editable-controls"
+      ],
+      "createdAt": "2026-07-16"
+    },
+    {
+      "id": "trail-ribbon-ropes",
+      "name": "Trail Ribbon Ropes",
+      "engine": "Three.js 3D + persistent ribbon-strip BufferGeometry + custom curl-noise",
+      "license": "MIT (Three.js) + custom scene code",
+      "description": "Flowing ribbon ropes whose heads are driven by curl-noise turbulence, rendered as tapering additive ribbon strips built from a rolling position history buffer, no per-frame geometry reallocation.",
+      "entry": "/trail-ribbon-ropes/index.html",
+      "bridged": true,
+      "controls": [
+        "Speed (slider + number)",
+        "Rope Count / Trail Length (slider + number)",
+        "Curl Scale (slider + number)",
+        "Hue / Sat / Hue Spread",
+        "Ribbon Width / Taper / Glow Intensity / Turbulence",
+        "Pause / All random / Seed / Undo / Redo / PNG export"
+      ],
+      "tags": [
+        "3d",
+        "ribbons",
+        "curl-noise",
+        "trails",
+        "geometric",
+        "glow",
+        "editable-controls"
+      ],
+      "createdAt": "2026-07-14"
+    },
+    {
+      "id": "vfx-cinematic-fog",
+      "name": "VFX Cinematic Fog",
+      "engine": "WebGL + GLSL + Three.js (distinct VFX renderer)",
+      "license": "MIT (Three.js) + custom shader code",
+      "description": "Premium cinematic fog volume with layered depth, slow atmospheric drift, and subtle highlight scattering.",
+      "entry": "/vfx-cinematic-fog/index.html",
+      "bridged": true,
+      "controls": [
+        "Power (slider + number)",
+        "Speed (slider + number)",
+        "Bloom (slider + number)",
+        "Hue (slider + number)",
+        "Sat (slider + number)",
+        "Scale (slider + number)",
+        "Layers (slider + number)",
+        "Drift (slider + number)",
+        "Depth (slider + number)",
+        "Grain (slider + number)",
+        "Pause / All random / Seed / Undo / Redo / PNG export"
+      ],
+      "tags": [
+        "vfx",
+        "fog",
+        "atmosphere",
+        "cinematic"
+      ],
+      "createdAt": "2026-07-10"
+    },
+    {
+      "id": "test-2d-prism-wave",
+      "name": "Test 2D Prism Wave",
+      "engine": "WebGL + GLSL + Three.js fullscreen quad",
+      "license": "MIT (Three.js) + custom shader code",
+      "description": "Visibility-first 2D shader test with bright prism gradients and flowing wave interference.",
+      "entry": "/test-2d-prism-wave/index.html",
+      "bridged": true,
+      "controls": [
+        "Speed (slider + number)",
+        "Hue (slider + number)",
+        "Saturation (slider + number)",
+        "Contrast (slider + number)",
+        "Flow (slider + number)",
+        "Density (slider + number)",
+        "Glow (slider + number)",
+        "Pause / All random / Seed / Undo / Redo / PNG export"
+      ],
+      "tags": [
+        "test",
+        "2d",
+        "shader",
+        "prism"
+      ],
+      "createdAt": "2026-07-14"
+    },
+    {
+      "id": "gradient-sdf-contour",
+      "name": "Gradient SDF Contour",
+      "engine": "WebGL + GLSL + SDF field blending",
+      "license": "MIT (Three.js) + custom shader code",
+      "description": "Gradient generated from signed-distance contours of procedural shapes (circle, capsule, and box), with smooth edge blending and prism-style contour bands.",
+      "entry": "/gradient-sdf-contour/index.html",
+      "bridged": true,
+      "controls": [
+        "Speed (slider + number)",
+        "Hue (slider + number)",
+        "Saturation (slider + number)",
+        "Contrast (slider + number)",
+        "Scale (slider + number)",
+        "Warp (slider + number)",
+        "Edge (slider + number)",
+        "Glow (slider + number)",
+        "Pause / All random / Seed / Undo / Redo / PNG export"
+      ],
+      "tags": [
+        "2d",
+        "gradient",
+        "sdf",
+        "contour"
+      ],
+      "createdAt": "2026-07-14"
+    },
+    {
+      "id": "vfx-dragonfire-eruption",
+      "name": "VFX Dragonfire Eruption",
+      "engine": "WebGL + GLSL + Three.js (distinct VFX renderer)",
+      "license": "MIT (Three.js) + custom shader code",
+      "description": "Explosive high-heat fire plumes with ash turbulence, incandescent cores, and cinematic flame tongues.",
+      "entry": "/vfx-dragonfire-eruption/index.html",
+      "bridged": true,
+      "controls": [
+        "Power (slider + number)",
+        "Speed (slider + number)",
+        "Bloom (slider + number)",
+        "Hue (slider + number)",
+        "Sat (slider + number)",
+        "FlameH (slider + number)",
+        "Core (slider + number)",
+        "Ash (slider + number)",
+        "Jet (slider + number)",
+        "Grain (slider + number)",
+        "Pause / All random / Seed / Undo / Redo / PNG export"
+      ],
+      "tags": [
+        "vfx",
+        "fire",
+        "eruption",
+        "heat"
+      ],
+      "createdAt": "2026-07-10"
+    },
+    {
+      "id": "vfx-arcane-sigil-bloom",
+      "name": "VFX Arcane Sigil Bloom",
+      "engine": "WebGL + GLSL + Three.js (distinct VFX renderer)",
+      "license": "MIT (Three.js) + custom shader code",
+      "description": "Runic magic sigils with layered radial glyph bands, spectral bloom halos, and mystic wave energy.",
+      "entry": "/vfx-arcane-sigil-bloom/index.html",
+      "bridged": true,
+      "controls": [
+        "Power (slider + number)",
+        "Speed (slider + number)",
+        "Bloom (slider + number)",
+        "Hue (slider + number)",
+        "Sat (slider + number)",
+        "Rune (slider + number)",
+        "Rings (slider + number)",
+        "Pulse (slider + number)",
+        "Etch (slider + number)",
+        "Grain (slider + number)",
+        "Pause / All random / Seed / Undo / Redo / PNG export"
+      ],
+      "tags": [
+        "vfx",
+        "magic",
+        "sigil",
+        "arcane"
+      ],
+      "createdAt": "2026-07-10"
+    },
+    {
+      "id": "vfx-plasma-jet-thruster",
+      "name": "VFX Plasma Jet Thruster",
+      "engine": "WebGL + GLSL + Three.js (distinct VFX renderer)",
+      "license": "MIT (Three.js) + custom shader code",
+      "description": "Focused plasma thruster cone with pressure ripples, hot core gradients, and ionized exhaust glow.",
+      "entry": "/vfx-plasma-jet-thruster/index.html",
+      "bridged": true,
+      "controls": [
+        "Power (slider + number)",
+        "Speed (slider + number)",
+        "Bloom (slider + number)",
+        "Hue (slider + number)",
+        "Sat (slider + number)",
+        "Cone (slider + number)",
+        "Core (slider + number)",
+        "Ripple (slider + number)",
+        "Exhaust (slider + number)",
+        "Grain (slider + number)",
+        "Pause / All random / Seed / Undo / Redo / PNG export"
+      ],
+      "tags": [
+        "vfx",
+        "plasma",
+        "thruster",
+        "energy"
+      ],
+      "createdAt": "2026-07-10"
+    },
+    {
+      "id": "vfx-radiant-energy-core",
+      "name": "VFX Radiant Energy Core",
+      "engine": "WebGL + GLSL + Three.js (distinct VFX renderer)",
+      "license": "MIT (Three.js) + custom shader code",
+      "description": "Radiant energy core with high-density ray interference, concentric shock layers, and premium bloom shaping.",
+      "entry": "/vfx-radiant-energy-core/index.html",
+      "bridged": true,
+      "controls": [
+        "Power (slider + number)",
+        "Speed (slider + number)",
+        "Bloom (slider + number)",
+        "Hue (slider + number)",
+        "Sat (slider + number)",
+        "Rays (slider + number)",
+        "Core (slider + number)",
+        "Pulse (slider + number)",
+        "Halo (slider + number)",
+        "Grain (slider + number)",
+        "Pause / All random / Seed / Undo / Redo / PNG export"
+      ],
+      "tags": [
+        "vfx",
+        "energy",
+        "core",
+        "radiant"
+      ],
+      "createdAt": "2026-07-10"
+    },
+    {
+      "id": "lens-flare-studio",
+      "name": "Lens Flare Studio",
+      "engine": "WebGL + GLSL + procedural optical flare synthesis",
+      "license": "Custom code (free commercial use)",
+      "description": "High-quality cinematic lens flare generator tuned to the provided reference: white-hot center burst, defocused radial light shards, chromatic spread, and dense zoom-style streak motion.",
+      "entry": "/lens-flare-studio/index.html",
+      "bridged": true,
+      "controls": [
+        "Power (slider + number)",
+        "Rays (slider + number)",
+        "Ghosts (slider + number)",
+        "Chroma (slider + number)",
+        "Halo (slider + number)",
+        "Streak (slider + number)",
+        "Gap (slider + number)",
+        "Breaks (slider + number)",
+        "Bloom (slider + number)",
+        "Core (slider + number)",
+        "Drift (slider + number)",
+        "GhostSpread (slider + number)",
+        "Chaos (slider + number)",
+        "Speed (slider + number)",
+        "Hue (slider + number)",
+        "Sat (slider + number)",
+        "MicroCt (slider + number)",
+        "MicroDns (slider + number)",
+        "MicroLen (slider + number)",
+        "MicroPwr (slider + number)",
+        "LongCt (slider + number)",
+        "LongDns (slider + number)",
+        "LongLen (slider + number)",
+        "LongWid (slider + number)",
+        "LongPwr (slider + number)",
+        "LongBrk (slider + number)",
+        "Pause / All random / Seed / Undo / Redo / PNG export"
+      ],
+      "tags": [
+        "lens-flare",
+        "cinematic",
+        "spectral",
+        "optical",
+        "high-quality",
+        "editable-controls"
+      ],
+      "createdAt": "2026-07-10"
+    },
+    {
+      "id": "lightning-forge",
+      "name": "Lightning Forge",
+      "engine": "Canvas 2D + procedural lightning synthesis",
+      "license": "Custom code (free commercial use)",
+      "description": "Premium electric lightning generator with white-hot cores, layered cyan plasma bloom, and dense fractal branching tuned for poster-grade still frames.",
+      "entry": "/lightning-forge/index.html",
+      "bridged": true,
+      "controls": [
+        "Branches (slider + number)",
+        "Depth (slider + number)",
+        "Rough (slider + number)",
+        "Plasma (slider + number)",
+        "Glow (slider + number)",
+        "Core (slider + number)",
+        "Spread (slider + number)",
+        "Speed (slider + number)",
+        "Hue (slider + number)",
+        "Bright (slider + number)",
+        "Pause / All random / Seed / Undo / Redo (unified control panel)"
+      ],
+      "tags": [
+        "lightning",
+        "electric",
+        "plasma",
+        "high-contrast",
+        "poster",
+        "editable-controls"
+      ],
+      "createdAt": "2026-07-10"
+    },
+    {
+      "id": "prismatic-light-columns",
+      "name": "Prismatic Light Columns",
+      "engine": "WebGL + GLSL + Three.js",
+      "license": "MIT (Three.js) + custom shader code",
+      "description": "Cold glass-like vertical light columns with cinematic white highlights and a drifting wave seam for premium tech visuals.",
+      "entry": "/prismatic-light-columns/index.html",
+      "bridged": true,
+      "controls": [
+        "Columns (slider + number)",
+        "Width (slider + number)",
+        "Wave (slider + number)",
+        "Band Soft (slider + number)",
+        "Edge Glow (slider + number)",
+        "Mist (slider + number)",
+        "Speed (slider + number)",
+        "Pause / All random / Seed / Undo / Redo (unified control panel)"
+      ],
+      "tags": [
+        "glass",
+        "prismatic",
+        "cold-tone",
+        "marketing",
+        "editable-controls"
+      ],
+      "createdAt": "2026-07-09"
+    },
+    {
+      "id": "neon-ribbon-flow",
+      "name": "Neon Ribbon Flow",
+      "engine": "WebGL + GLSL + Three.js",
+      "license": "MIT (Three.js) + custom shader code",
+      "description": "Black-background neon ribbon composition with translucent layered curves and controllable glow for premium poster visuals.",
+      "entry": "/neon-ribbon-flow/index.html",
+      "bridged": true,
+      "controls": [
+        "Speed (slider + number)",
+        "Layers (slider + number)",
+        "Width (slider + number)",
+        "Swing (slider + number)",
+        "Twist (slider + number)",
+        "Glow (slider + number)",
+        "Pause / All random / Seed / Undo / Redo (unified control panel)"
+      ],
+      "tags": [
+        "neon",
+        "ribbon",
+        "dark-background",
+        "marketing",
+        "editable-controls"
+      ],
+      "createdAt": "2026-07-09"
+    },
+    {
+      "id": "neon-arc-grid",
+      "name": "Neon Arc Grid",
+      "engine": "WebGL + GLSL + Three.js",
+      "license": "MIT (Three.js) + custom shader code",
+      "description": "Dark grid of spectral neon quarter-circle arcs with diagonal hue cycling, chromatic aberration fringe, and white-hot core glow Ã¢â‚¬â€ ideal for tech/poster visuals.",
+      "entry": "/neon-arc-grid/index.html",
+      "bridged": true,
+      "controls": [
+        "Cols (slider + number)",
+        "Rows (slider + number)",
+        "Arc (slider + number)",
+        "Glow (slider + number)",
+        "Chroma (slider + number)",
+        "Speed (slider + number)",
+        "Hue (slider + number)",
+        "Bright (slider + number)",
+        "Pause / All random / Seed / Undo / Redo / PNG export"
+      ],
+      "tags": [
+        "neon",
+        "grid",
+        "spectral",
+        "chromatic",
+        "dark-background",
+        "marketing",
+        "editable-controls"
+      ],
+      "createdAt": "2026-07-10"
+    },
+    {
+      "id": "particle-scatter-studio",
+      "name": "Particle Scatter Studio",
+      "engine": "WebGL + GLSL + Three.js (procedural particle field, transparent alpha export)",
+      "license": "MIT (Three.js) + custom shader code",
+      "description": "Decorative scatter-particle generator for compositing over other visuals: twinkling star sparkles, drifting warm ember flecks, soft floating light orbs, and optional domain-warped nebula background with temperature-based star colors. Exports with transparent alpha for overlay use.",
+      "entry": "/particle-scatter-studio/index.html",
+      "bridged": true,
+      "controls": [
+        "Power (slider + number)",
+        "Speed (slider + number)",
+        "Bloom (slider + number)",
+        "Grain (slider + number)",
+        "Hue (slider + number)",
+        "Hue Drift (slider + number)",
+        "Sat (slider + number)",
+        "Star Temp (slider + number)",
+        "Density (slider + number)",
+        "Size (slider + number)",
+        "Embers (slider + number)",
+        "Sparkle (slider + number)",
+        "Orbs (slider + number)",
+        "Drift (slider + number)",
+        "Clump (slider + number)",
+        "Nebula (slider + number)",
+        "Neb Hue (slider + number)",
+        "Warm (slider + number)",
+        "Scale (slider + number)",
+        "Detail (slider + number)",
+        "Neb Drift (slider + number)",
+        "Pause / All random / Seed / Undo / Redo / PNG export"
+      ],
+      "tags": [
+        "particles",
+        "sparkle",
+        "embers",
+        "dust",
+        "nebula",
+        "starfield",
+        "decoration",
+        "overlay",
+        "transparent-export",
+        "marketing"
+      ],
+      "createdAt": "2026-07-14"
+    },
+    {
+      "id": "luminous-strand-weave",
+      "name": "Luminous Strand Weave",
+      "engine": "WebGL + GLSL + Three.js",
+      "license": "MIT (Three.js) + custom shader code",
+      "description": "Layered light-strand composition that goes beyond a simple ribbon flow: each strand independently ranges from hazy, formless wisps of light to sharp, defined neon filaments, all bent together by a shared organic flow field with a soft ambient glow backdrop.",
+      "entry": "/luminous-strand-weave/index.html",
+      "bridged": true,
+      "controls": [
+        "Power (slider + number)",
+        "Speed (slider + number)",
+        "Bloom (slider + number)",
+        "Grain (slider + number)",
+        "Hue (slider + number)",
+        "Sat (slider + number)",
+        "Hue Var (slider + number)",
+        "Strands (slider + number)",
+        "Concrete (slider + number)",
+        "Flow (slider + number)",
+        "Reach (slider + number)",
+        "Wisp (slider + number)",
+        "Pause / All random / Seed / Undo / Redo (unified control panel)"
+      ],
+      "tags": [
+        "light-strands",
+        "neon",
+        "ribbon",
+        "ethereal",
+        "glow",
+        "premium",
+        "poster",
+        "marketing"
+      ],
+      "createdAt": "2026-07-15"
+    },
+    {
+      "id": "ink-fluid-lab",
+      "name": "Ink Fluid Lab",
+      "engine": "WebGL + GLSL (GPGPU ping-pong FBO fluid sim)",
+      "license": "MIT (Three.js) + custom shader code",
+      "description": "GPU ping-pong render-target fluid simulation: analytic curl-noise velocity field backtrace-advects a dye density buffer fed by moving emitters, colorized in a separate display pass Ã¢â‚¬â€ a showcase of feedback-buffer GPGPU technique.",
+      "entry": "/ink-fluid-lab/index.html",
+      "controls": [
+        "Speed (slider + number)",
+        "Curl (slider + number)",
+        "Grain (slider + number)",
+        "Hue (slider + number)",
+        "Sat (slider + number)",
+        "Bright (slider + number)",
+        "Emitters (slider + number)",
+        "Fade (slider + number)",
+        "Ink Size (slider + number)",
+        "Pause / All random / Seed / Undo / Redo (unified control panel)"
+      ],
+      "bridged": true,
+      "tags": [
+        "gpgpu",
+        "fluid-sim",
+        "curl-noise",
+        "ping-pong-fbo",
+        "glsl-ceiling",
+        "premium",
+        "poster",
+        "marketing"
+      ],
+      "createdAt": "2026-07-20"
+    },
+    {
+      "id": "ebru-marbling-flow",
+      "name": "Ebru Marbling Flow",
+      "engine": "WebGL + GLSL (GPGPU ping-pong FBO, curl-noise + comb sweep)",
+      "license": "MIT (Three.js) + custom shader code",
+      "description": "Turkish Ebru-style paper marbling: multi-hued dye droplets drift on a paper-cream bath under curl-noise turbulence while a periodic fine-tooth comb sweep drags vertical bands into scalloped waves Ã¢â‚¬â€ a painterly variation on GPGPU dye advection.",
+      "entry": "/ebru-marbling-flow/index.html",
+      "bridged": true,
+      "controls": [
+        "Speed (slider + number)",
+        "Drift (slider + number)",
+        "Grain (slider + number)",
+        "Teeth (slider + number)",
+        "Comb Force (slider + number)",
+        "Fade (slider + number)",
+        "Drops (slider + number)",
+        "Drop Size (slider + number)",
+        "Hue (slider + number)",
+        "Bright (slider + number)",
+        "Pause / All random / Seed / Undo / Redo (unified control panel)"
+      ],
+      "tags": [
+        "gpgpu",
+        "fluid-sim",
+        "marbling",
+        "ping-pong-fbo",
+        "glsl-ceiling",
+        "premium",
+        "poster",
+        "painterly"
+      ],
+      "createdAt": "2026-07-21"
+    },
+    {
+      "id": "stable-smoke-vortex",
+      "name": "Stable Smoke Vortex",
+      "engine": "WebGL + GLSL (multi-pass Navier-Stokes stable-fluids GPGPU)",
+      "license": "MIT (Three.js) + custom shader code",
+      "description": "A real incompressible Navier-Stokes solver (Jos Stam stable-fluids method): velocity self-advection, vortex force splats, divergence computation, a 20-iteration Jacobi pressure solve and gradient-subtraction produce a genuinely divergence-free flow that advects colored smoke into swirling vortices.",
+      "entry": "/stable-smoke-vortex/index.html",
+      "bridged": true,
+      "controls": [
+        "Speed (slider + number)",
+        "Turbulence (slider + number)",
+        "Grain (slider + number)",
+        "Count (slider + number)",
+        "Force (slider + number)",
+        "Decay (slider + number)",
+        "Inject Size (slider + number)",
+        "Hue (slider + number)",
+        "Saturation (slider + number)",
+        "Bright (slider + number)",
+        "Dye Fade (slider + number)",
+        "Pause / All random / Seed / Undo / Redo / PNG export"
+      ],
+      "tags": [
+        "gpgpu",
+        "navier-stokes",
+        "stable-fluids",
+        "pressure-solve",
+        "ping-pong-fbo",
+        "glsl-ceiling",
+        "premium",
+        "poster"
+      ],
+      "createdAt": "2026-07-21"
+    },
+    {
+      "id": "fractal-abyss",
+      "name": "Fractal Abyss",
+      "engine": "WebGL + GLSL (Mandelbulb SDF raymarch)",
+      "license": "MIT (Three.js) + custom shader code",
+      "description": "Raymarched Mandelbulb distance-estimator fractal with soft shadows, central-difference normals, orbit-trap coloring and starfield ray misses Ã¢â‚¬â€ a showcase of implicit-surface raymarching pushed to its visual ceiling.",
+      "entry": "/fractal-abyss/index.html",
+      "bridged": true,
+      "controls": [
+        "Speed (slider + number)",
+        "Power (slider + number)",
+        "Detail (slider + number)",
+        "Grain (slider + number)",
+        "Hue (slider + number)",
+        "Sat (slider + number)",
+        "Bright (slider + number)",
+        "Shadow (slider + number)",
+        "Glow (slider + number)",
+        "Zoom (slider + number)",
+        "Pause / All random / Seed / Undo / Redo (unified control panel)"
+      ],
+      "tags": [
+        "raymarch",
+        "sdf",
+        "mandelbulb",
+        "fractal",
+        "glsl-ceiling",
+        "premium",
+        "poster",
+        "marketing"
+      ],
+      "createdAt": "2026-07-20"
+    },
+    {
+      "id": "silk-curve-atelier",
+      "name": "Silk Curve Atelier",
+      "engine": "WebGL + GLSL + Three.js",
+      "license": "MIT (Three.js) + custom shader code",
+      "description": "A multi-style curve composer with six selectable curve families (Wave, Spiral, Rose Loop, Braid, Calligraphy, and a Mixed combo mode that assigns each layer a different family), giving Neon Ribbon Flow's soft-glow look real compositional variety.",
+      "entry": "/silk-curve-atelier/index.html",
+      "bridged": true,
+      "controls": [
+        "Layers (slider + number)",
+        "Speed (slider + number)",
+        "Glow (slider + number)",
+        "Grain (slider + number)",
+        "Hue (slider + number)",
+        "Hue Var (slider + number)",
+        "Sat (slider + number)",
+        "Style (Wave / Spiral / Rose Loop / Braid / Calligraphy / Mixed)",
+        "Width (slider + number)",
+        "Swing (slider + number)",
+        "Twist (slider + number)",
+        "Petals (slider + number)",
+        "Weave (slider + number)",
+        "Taper (slider + number)",
+        "Pause / All random / Seed / Undo / Redo (unified control panel)"
+      ],
+      "tags": [
+        "neon",
+        "curve",
+        "multi-style",
+        "combo",
+        "poster",
+        "marketing",
+        "editable-controls"
+      ],
+      "createdAt": "2026-07-21"
+    },
+    {
+      "id": "cel-grass-tile",
+      "name": "Cel Grass Tile",
+      "engine": "Three.js 3D + instanced grass blades + toon/cel quantized shading",
+      "license": "MIT (Three.js) + custom shader code",
+      "description": "A real 3D toon grass field: thousands of instanced blades with wind-driven bend animation, quantized cel lighting bands, stylized outline tinting, and a layered patchy ground plane for anime/game NPR looks.",
+      "entry": "/cel-grass-tile/index.html",
+      "bridged": true,
+      "controls": [
+        "Wind Speed / Wind Bend / Blade Density / Field Size / Blade Height / Tip Taper / Toon Levels",
+        "Hue / Saturation / Brightness / Hue Variance",
+        "Shadow Strength / Ambient Lift / Rim Light / Outline Tint",
+        "Pause / All random / Seed / Undo / Redo / PNG export"
+      ],
+      "tags": [
+        "3d",
+        "toon",
+        "cel-shaded",
+        "grass",
+        "stylized",
+        "game-asset",
+        "npr",
+        "interactive-camera",
+        "editable-controls"
+      ],
+      "createdAt": "2026-07-25"
+    },
+    {
+      "id": "enamel-mosaic-pop",
+      "name": "Enamel Mosaic Pop",
+      "engine": "WebGL + GLSL + Three.js fullscreen pattern quad",
+      "license": "MIT (Three.js) + custom shader code",
+      "description": "A polished enamel mosaic tile generator with lively inlaid medallions and clean grout structure, good for posters, youthful packaging, social graphics, and graphic decor.",
+      "entry": "/enamel-mosaic-pop/index.html",
+      "bridged": true,
+      "controls": [
+        "Speed / Scale (slider + number)",
+        "Roundness / Center / Grout / Offset (slider + number)",
+        "Warp / Hue / Saturation / Contrast / Glow (slider + number)",
+        "Pause / All random / Seed / Undo / Redo / PNG export"
+      ],
+      "tags": [
+        "2d",
+        "pattern",
+        "mosaic",
+        "enamel",
+        "tile",
+        "packaging",
+        "poster"
+      ],
+      "createdAt": "2026-07-15"
+    },
+    {
+      "id": "modular-pattern-tessellator",
+      "name": "Modular Pattern Tessellator",
+      "engine": "WebGL + GLSL + Three.js fullscreen pattern system",
+      "license": "MIT (Three.js) + custom shader code",
+      "description": "A modular decorative pattern system inspired by Enamel Mosaic Pop: switch between square, ring, and triangle grids, stack multiple geometric shapes at once, and tune overlap fusion, cross-shape combine behavior, and color interaction modes.",
+      "entry": "/modular-pattern-tessellator/index.html",
+      "bridged": true,
+      "controls": [
+        "Grid type dropdown: Square / Ring / Triangle",
+        "Per-grid Density / Structure / Random controls",
+        "Shape stack dropdown with multi-active shapes and per-shape expanded controls",
+        "Per-shape Size / Edge / Round / Blend / Combine / Tint / Mix mode",
+        "Global Hue / Saturation / Contrast / Glow",
+        "Pause / All random / Seed / Undo / Redo / PNG export"
+      ],
+      "tags": [
+        "2d",
+        "pattern",
+        "modular",
+        "grid-system",
+        "shape-stacking",
+        "decorative",
+        "packaging",
+        "poster"
+      ],
+      "createdAt": "2026-07-15"
+    },
+    {
+      "id": "ortho-node-lattice",
+      "name": "Ortho Node Lattice",
+      "engine": "WebGL + GLSL + Three.js fullscreen graph pattern shader",
+      "license": "MIT (Three.js) + custom shader code",
+      "description": "Square lattice node graph generator where each node only links in four orthogonal directions (up/down/left/right), with controllable per-node max connection count (2-4), line thickness, edge softness, and rounded right-angle joins.",
+      "entry": "/ortho-node-lattice/index.html",
+      "bridged": true,
+      "controls": [
+        "Density (slider + number)",
+        "Max Conn (2-4, slider + number)",
+        "Link Fill (slider + number)",
+        "Line Width / Point Size (slider + number)",
+        "Edge Soft (slider + number)",
+        "Corner Round (slider + number)",
+        "SDF switch + Ring Spacing / Ring Thickness / Ring Jitter / Island Jitter",
+        "Hue / Sat / Contrast / Glow",
+        "Pause / All random / Seed / Undo / Redo / PNG export"
+      ],
+      "tags": [
+        "2d",
+        "graph",
+        "lattice",
+        "orthogonal",
+        "node-network",
+        "editable-controls",
+        "poster"
+      ],
+      "createdAt": "2026-07-15"
+    },
+    {
+      "id": "radial-node-lattice",
+      "name": "Radial Node Lattice",
+      "engine": "WebGL + GLSL + Three.js fullscreen graph pattern shader",
+      "license": "MIT (Three.js) + custom shader code",
+      "description": "Radial node graph generator built on concentric rings + sectors. Every node only connects in four lattice directions (clockwise / counter-clockwise / outward / inward), with controllable per-node max connections (2-4), line thickness, edge softness, and rounded line joins.",
+      "entry": "/radial-node-lattice/index.html",
+      "bridged": true,
+      "controls": [
+        "Density (rings + sectors, slider + number)",
+        "Max Conn (2-4, slider + number)",
+        "Link Fill (slider + number)",
+        "Line Width / Point Size (slider + number)",
+        "Edge Soft (slider + number)",
+        "Corner Round (slider + number)",
+        "SDF switch + Ring Spacing / Ring Thickness / Ring Jitter / Island Jitter",
+        "Hue / Sat / Contrast / Glow",
+        "Pause / All random / Seed / Undo / Redo / PNG export"
+      ],
+      "tags": [
+        "2d",
+        "graph",
+        "lattice",
+        "radial",
+        "node-network",
+        "concentric",
+        "editable-controls",
+        "poster"
+      ],
+      "createdAt": "2026-07-16"
+    },
+    {
+      "id": "divfree-height-streamlines",
+      "name": "Divergence-Free Height Streamlines",
+      "engine": "p5.js 2D static streamline tracing from gradient-perpendicular flow",
+      "license": "Custom code (free commercial use)",
+      "description": "Builds a smooth noise height-map and derives a divergence-free flow field as the perpendicular of its gradient. Particles advect along this field and deposit non-intersecting, near-parallel curve clusters.",
+      "entry": "/divfree-height-streamlines/index.html",
+      "bridged": true,
+      "controls": [
+        "Field Scale / Warp / Octave Mix / Gradient Step (slider + number)",
+        "Line Count / Trace Steps / Step Length (slider + number)",
+        "Stroke Width / Clearance (slider + number)",
+        "Cluster Min / Max / Gap / Anchor Random (slider + number)",
+        "Hue / Sat / Alpha / BG Value",
+        "All random / Seed / Undo / Redo / PNG export"
+      ],
+      "tags": [
+        "2d",
+        "divergence-free",
+        "heightmap",
+        "gradient",
+        "streamlines",
+        "parallel-curves",
+        "editable-controls"
+      ],
+      "createdAt": "2026-07-17"
+    },
+    {
+      "id": "divfree-scratch-streamlines",
+      "name": "Divergence-Free Scratch Streamlines",
+      "engine": "p5.js 2D scratch-like streamline smearing from gradient-perpendicular flow",
+      "license": "Custom code (free commercial use)",
+      "description": "Duplicates the divergence-free streamline tracer into a scratch-style renderer: the source image or procedural noise field is rendered as layer 0, while streamlines sample source color and drag it forward after strong local contrast changes to create smeared color scratches.",
+      "entry": "/divfree-scratch-streamlines/index.html",
+      "bridged": true,
+      "controls": [
+        "Field Scale / Warp / Octave Mix / Gradient Step (slider + number)",
+        "Line Count / Trace Steps / Step Length (slider + number)",
+        "Stroke Width / Clearance / Source Mix / Source Precision",
+        "Scratch Drag Threshold / Max Drag",
+        "Cluster Min / Max / Gap / Anchor Random (slider + number)",
+        "Hue / Sat / Alpha / BG Value",
+        "All random / Seed / Undo / Redo / PNG export"
+      ],
+      "tags": [
+        "2d",
+        "divergence-free",
+        "heightmap",
+        "streamlines",
+        "scratch",
+        "image-sampling",
+        "editable-controls"
+      ],
+      "createdAt": "2026-07-18"
+    },
+    {
+      "id": "x-cross-halftone-lab",
+      "name": "X Cross Halftone Lab",
+      "engine": "WebGL + GLSL + Three.js fullscreen unit-halftone renderer",
+      "license": "MIT (Three.js) + custom shader code",
+      "description": "Grayscale-driven color halftone using X units (two crossing lines per cell): luminance controls unit size and density, while optional split-color mode decomposes each unit's sampled average color into two line colors that spatially mix back to the original.",
+      "entry": "/x-cross-halftone-lab/index.html",
+      "bridged": true,
+      "controls": [
+        "Precision / X Thickness / X Soft (slider + number)",
+        "Size Min / Size Max / Density Min / Density Max / Angle",
+        "Split Color section: Enable Split / Split Amount / Split Random / Value Differences / Hue Differences (center sliders)",
+        "Split Map section: Map Blend / Hue Shift / Group Preview / Split Map Scale / Split Map Warp (shown when split is enabled)",
+        "Noise Scale / Grad Tilt fallback input controls",
+        "Image upload (noise fallback when no image)",
+        "Pause / All random / Seed / Undo / Redo / PNG export"
+      ],
+      "tags": [
+        "2d",
+        "halftone",
+        "x-pattern",
+        "cross-lines",
+        "split-color",
+        "image-input",
+        "editable-controls"
+      ],
+      "createdAt": "2026-07-18"
+    },
+    {
+      "id": "quad-luma-halftone-stack",
+      "name": "Quad Luma Halftone Stack",
+      "engine": "WebGL + GLSL + Three.js fullscreen layered halftone compositor",
+      "license": "MIT (Three.js) + custom shader code",
+      "description": "Splits source luminance into 4 adaptive bands using the current image's min-to-max luma range, builds a blurred darkened base layer, then stacks four masked halftone layers (bands 1/2/3/4) with per-layer density, shape, and island-box mask controls for poster-style color separation.",
+      "entry": "/quad-luma-halftone-stack/index.html",
+      "bridged": true,
+      "controls": [
+        "Mask Soft (slider + number)",
+        "Layer 0: Base Blur / Base Luma (slider + number)",
+        "Layer 1: Density + Shape + Island Mode switch + Island Threshold (hidden when OFF)",
+        "Layer 2: Density + Shape + Island Mode switch + Island Threshold (hidden when OFF)",
+        "Layer 3: Density + Shape + Island Mode switch + Island Threshold (hidden when OFF)",
+        "Layer 4: Density + Shape + Island Mode switch + Island Threshold (hidden when OFF)",
+        "Noise Scale / Grad Tilt fallback input controls",
+        "Image upload (noise fallback when no image)",
+        "Pause / All random / Seed / Undo / Redo / PNG export"
+      ],
+      "tags": [
+        "2d",
+        "halftone",
+        "luma-bands",
+        "layered-composition",
+        "image-input",
+        "editable-controls"
+      ],
+      "createdAt": "2026-07-18"
+    },
+    {
+      "id": "gradient-diff-hatching-sketch",
+      "name": "Gradient Diff Hatching Sketch",
+      "engine": "p5.js 2D tonal-band differential hatching",
+      "license": "Custom code (free commercial use)",
+      "description": "Transforms the input into tonal gradients (default 5 bands), treats each band as a mask, and stacks hatch layers by band-to-band darkness differences: layer 1 fills masks 1-5 by band-1 tone density, layer 2 fills masks 2-5 by the delta between band-2 and band-1, and so on.",
+      "entry": "/gradient-diff-hatching-sketch/index.html",
+      "bridged": true,
+      "controls": [
+        "Band Count / Band Curve / Dark Boost / Edge Boost",
+        "Density Gain / Min Spacing / Max Spacing / Stroke Width / Jitter",
+        "Trace Steps / Step Length / Cluster Lanes / Cluster Gap",
+        "Field Scale / Field Warp / Octave Mix / Gradient Step",
+        "Ink Hue / Ink Sat / Ink Value / Ink Alpha / Paper",
+        "Build Speed / Image input / Pause / All random / Seed / Undo / Redo / PNG export"
+      ],
+      "tags": [
+        "2d",
+        "sketch",
+        "hatching",
+        "gradient-bands",
+        "differential-density",
+        "image-input",
+        "editable-controls"
+      ],
+      "createdAt": "2026-07-19"
+    },
+    {
+      "id": "gradient-diff-hatching-per-band-field",
+      "name": "Gradient Diff Hatching (Per-Band Field)",
+      "engine": "p5.js 2D tonal-band hatching with per-band flow field",
+      "license": "Custom code (free commercial use)",
+      "description": "Experimental variant of Gradient Diff Hatching Sketch. Each gradient band uses its own streamline field: in overlap mode (<=3 bands), layer 1 uses field 1 over masks 1-5, layer 2 uses field 2 over masks 2-5, etc.; in direct-mask mode (>3 bands), each band draws only inside its own mask with its own field.",
+      "entry": "/gradient-diff-hatching-per-band-field/index.html",
+      "bridged": true,
+      "controls": [
+        "Band Count / Band Curve / Dark Boost / Edge Boost",
+        "Density Gain / Min Spacing / Max Spacing / Stroke Width / Jitter",
+        "Trace Steps / Step Length / Cluster Lanes / Cluster Gap",
+        "Field Scale / Field Warp / Octave Mix / Gradient Step (per-band field variant)",
+        "Ink Hue / Ink Sat / Ink Value / Ink Alpha / Paper",
+        "Build Speed / Image input / Pause / All random / Seed / Undo / Redo / PNG export"
+      ],
+      "tags": [
+        "2d",
+        "sketch",
+        "hatching",
+        "gradient-bands",
+        "per-band-field",
+        "image-input",
+        "editable-controls"
+      ],
+      "createdAt": "2026-07-19"
+    },
+    {
+      "id": "edge-radiant-honeycomb-matrix",
+      "name": "Edge Radiant Honeycomb Matrix",
+      "engine": "p5.js CPU attractor-driven honeycomb square matrix",
+      "license": "Custom code (free commercial use)",
+      "description": "Converts the input into a honeycomb square matrix with darkness-sorted attractor dynamics. Image1 is generated as edge-find with outward radiation, then remapped by its own min/max to 0-1 brightness. Squares sample color directly from the original input, while darker Image1 cells (processed from darkest to brightest) attract brighter cells proportionally to distance; attraction only affects brighter neighbors and includes non-overlap relaxation with adjustable strength.",
+      "entry": "/edge-radiant-honeycomb-matrix/index.html",
+      "bridged": true,
+      "controls": [
+        "Cell Size / Square Scale",
+        "Edge Sample / Edge Threshold / Edge Soft / Radiant Radius / Edge Gain",
+        "Attract Amp / Influence Radius / No Overlap / Relax Passes",
+        "Background tone / Speed / Image input",
+        "Pause / All random / Seed / Undo / Redo / PNG export"
+      ],
+      "tags": [
+        "2d",
+        "image-input",
+        "edge-detection",
+        "dot-matrix",
+        "honeycomb",
+        "attractor-dynamics",
+        "editable-controls"
+      ],
+      "createdAt": "2026-07-19"
+    },
+    {
+      "id": "mondrian-growth",
+      "name": "Mondrian Growth",
+      "engine": "Canvas 2D + cardinal growing lines + BFS flood fill",
+      "license": "Custom code (free commercial use)",
+      "description": "Seed points emit 1-4 cardinal-direction lines that halt on collision, then BFS flood-fills each enclosed cell with a palette color â€” producing Mondrian-style organic subdivision with configurable seeds, line weight, growth speed, and six curated palettes.",
+      "entry": "/mondrian-growth/index.html",
+      "bridged": true,
+      "controls": [
+        "Seeds (slider + number)",
+        "Line Width (slider + number)",
+        "Grow Speed (slider + number)",
+        "Palette 0-5 (slider + number)",
+        "Saturation (slider + number)",
+        "Pause / Regenerate / Recolor / All random / Seed / Undo / Redo"
+      ],
+      "tags": [
+        "mondrian",
+        "generative",
+        "flat-design",
+        "flood-fill",
+        "canvas-2d",
+        "editable-controls"
+      ],
+      "createdAt": "2026-07-20"
+    },
+    {
+      "id": "image-filter-canvas",
+      "name": "Image Filter Canvas",
+      "engine": "Canvas 2D image viewport",
+      "license": "Custom code (free commercial use)",
+      "description": "A clean image-only viewport project for loading photos/artwork and applying the global filter stack. Includes fit mode (contain/cover/stretch), zoom, pan offset, and background tone controls.",
+      "entry": "/image-filter-canvas/index.html",
+      "bridged": true,
+      "controls": [
+        "Fit Mode (dropdown)",
+        "Zoom / Offset X / Offset Y",
+        "Background Tone",
+        "Image input",
+        "Pause / All random / Seed / Undo / Redo / PNG export"
+      ],
+      "tags": [
+        "2d",
+        "image-input",
+        "filters",
+        "canvas",
+        "utility"
+      ],
+      "createdAt": "2026-07-21"
+    },
+    {
+      "id": "volumetric-smoke",
+      "name": "Volumetric Smoke",
+      "engine": "Three.js + fullscreen GLSL â€” triple domain-warp gradient-noise FBM + self-shadowing",
+      "license": "MIT (Three.js) + custom shader code",
+      "description": "A high-quality procedural smoke/fog/mist/steam shader for compositing use. Uses triple-level domain-warped fractal Brownian motion with quintic Perlin-style gradient noise, mode-specific density profiles, directional self-shadowing, rim lighting, and full alpha-channel output for overlay compositing. Presets: Fog (ground-hugging), Mist (ethereal mid-air), Smoke (turbulent rising column), Steam (directional jet). Export as transparent PNG.",
+      "entry": "/volumetric-smoke/index.html",
+      "bridged": true,
+      "controls": [
+        "Mode â€” Fog / Mist / Smoke / Steam (select)",
+        "Background â€” Checker / Dark / Light / Black (select)",
+        "Speed (slider + number)",
+        "Scale (slider + number)",
+        "Detail (slider + number)",
+        "Turbulence (slider + number)",
+        "Rise (slider + number)",
+        "Wind (slider + number)",
+        "Density (slider + number)",
+        "Threshold (slider + number)",
+        "Edge Softness (slider + number)",
+        "Light (slider + number)",
+        "Light Angle (slider + number)",
+        "Warmth (slider + number)",
+        "Seed (slider + number)",
+        "Pause / All random / Seed / Undo / Redo / PNG export"
+      ],
+      "tags": [
+        "2d",
+        "shader",
+        "smoke",
+        "fog",
+        "vfx",
+        "compositing",
+        "alpha"
+      ],
+      "createdAt": "2026-07-22"
+    },
+    {
+      "id": "fluid-multigrid",
+      "name": "Fluid Multigrid Sim",
+      "engine": "Three.js multi-pass WebGL2, real Navier-Stokes PDE + V-cycle multigrid pressure solver",
+      "license": "MIT (Three.js) + custom shader code",
+      "description": "Real incompressible Navier-Stokes fluid simulation with a multigrid V-cycle pressure solver (3 levels: 512\u2192256\u2192128). Each frame: velocity/dye advection, vorticity confinement, divergence compute, multigrid pressure solve, gradient projection. Three auto-orbit color emitters plus mouse/touch splat. Controls: Speed, Vorticity, Dye/Vel Decay, Brush Force, Auto Emit, Brightness, Saturation, 3 Hue colors.",
+      "entry": "/fluid-multigrid/index.html",
+      "bridged": true,
+      "controls": [
+        "Speed (slider + number)",
+        "Vorticity (slider + number)",
+        "Dye Decay (slider + number)",
+        "Vel Decay (slider + number)",
+        "Brush Force (slider + number)",
+        "Auto Emit (slider + number)",
+        "Brightness (slider + number)",
+        "Saturation (slider + number)",
+        "Hue 1 (slider + number)",
+        "Hue 2 (slider + number)",
+        "Hue 3 (slider + number)"
+      ],
+      "tags": ["fluid", "simulation", "navier-stokes", "multigrid", "interactive"]
+    }
+  ]
+}
